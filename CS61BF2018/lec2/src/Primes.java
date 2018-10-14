@@ -5,13 +5,26 @@ public class Primes {
     public static void main(String[] args) {
         int testnum = 101;
         printPrimes (testnum);
+//        printPrimes (Integer.parseInt (args[0]));
     }
 
     /** Print all primes up to and including LIMIT, 10 to
      *  a line. */
-    public static void printPrimes (int limit) {
+/*    public static void printPrimes (int limit) {
         printPrimes (2, limit, 0);
         System.out.println ();
+    }*/
+
+    public static void printPrimes (int limit) {
+        int np = 0;
+        for (int p = 2; p <= limit; p += 1) {
+            if (isPrime(p)) {
+                System.out.print(p + " ");
+                np += 1;
+                if (np % 10 == 0)
+                    System.out.println();
+            }
+        }
     }
 
     /** Print all primes from L to U, inclusive, 10 to a
