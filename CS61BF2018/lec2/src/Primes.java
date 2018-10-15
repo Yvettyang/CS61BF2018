@@ -10,12 +10,12 @@ public class Primes {
 
     /** Print all primes up to and including LIMIT, 10 to
      *  a line. */
-/*    public static void printPrimes (int limit) {
+/*    private static void printPrimes (int limit) {
         printPrimes (2, limit, 0);
         System.out.println ();
     }*/
 
-    public static void printPrimes (int limit) {
+    private static void printPrimes (int limit) {
         int np = 0;
         for (int p = 2; p <= limit; p += 1) {
             if (isPrime(p)) {
@@ -30,7 +30,7 @@ public class Primes {
     /** Print all primes from L to U, inclusive, 10 to a
      *  line, given that there are initially M primes
      *  printed on the current line. */
-    public static void printPrimes (int L, int U, int M) {
+    private static void printPrimes (int L, int U, int M) {
         if (L <= U) {
             if (! isPrime (L))
                 printPrimes (L+1, U, M);
@@ -46,7 +46,7 @@ public class Primes {
     }
 
     /** True iff X is a prime number. */
-    public static boolean isPrime (int x) {
+    private static boolean isPrime (int x) {
         if (x <= 1)
             return false;
         else
@@ -55,7 +55,7 @@ public class Primes {
 
     /** True iff X is divisible by any positive number >=K
      *  and <X, given K>1. */
-    public static boolean isDivisible (int x, int k) {
+    private static boolean isDivisible (int x, int k) {
         if (k >= x)
             return false;
         else if (x % k == 0)
